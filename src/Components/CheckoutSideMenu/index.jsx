@@ -16,7 +16,7 @@ const CheckoutSideMenu = () => {
     context.setCartProducts(filteredProducts);
   };
 
-  const handleCheckout = () => {
+  const handleCheckout = () => {    
     const orderToAdd = {
       date: "01.02.23",
       products: context.cartProducts,
