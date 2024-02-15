@@ -16,10 +16,12 @@ const CheckoutSideMenu = () => {
     context.setCartProducts(filteredProducts);
   };
 
-  const handleCheckout = () => { 
+  const handleCheckout = () => {
+    const currentDate = new Date();
+    const formattedDate = `${currentDate.getDate()}.${currentDate.getMonth() + 1}.${currentDate.getFullYear()}`; 
     context.closeCheckOutSideMenu()   
     const orderToAdd = {
-      date: "01.02.23",
+      date: formattedDate,
       products: context.cartProducts,
       totalProducts: context.cartProducts.length,
       totalPrice: totalPrice(context.cartProducts),

@@ -7,7 +7,7 @@ const OrderCard = (props) => {
     renderTrashIcon = (
       <TrashIcon
         onClick={() => handleDelete(id)}
-        className="h-6 w-6 text-black cursor-pointer"
+        className="h-5 w-5 text-black cursor-pointer"
       ></TrashIcon>
     );
   }
@@ -22,7 +22,7 @@ const OrderCard = (props) => {
             alt={title}
           />
         </figure>
-        <p className="text-sm font-light">{title.substring(0,30)}</p>
+        <p className="text-sm font-light">{title.substring(0, 30)}</p>
       </div>
       <div className="flex items-center gap-1">
         <p className="text-md font-medium">${price}</p>
